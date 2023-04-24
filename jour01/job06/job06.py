@@ -14,6 +14,8 @@ class Rectangle:
 
 
 rectangle = Rectangle()
-print("les longueur et largeur du rectangle sont de", rectangle.get_longueur(), "et", rectangle.get_largeur())
+print("les longueur et largeur du rectangle sont de",
+      rectangle.get_longueur(), "et", rectangle.get_largeur())
 rectangle.set_valeur(20, 10)
-print("les nouvelles longueur et largeur du rectangle sont de", rectangle.get_longueur(), "et", rectangle.get_largeur())
+print("les nouvelles longueur et largeur du rectangle sont de",
+      rectangle.get_longueur(), "et", rectangle.get_largeur())
