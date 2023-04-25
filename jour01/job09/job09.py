@@ -22,13 +22,13 @@ class Student:
             self.__credit += valeur
 
     def studentEval(self):
-        if self.__credit >= 90:
+        if self.get_credit() >= 90:
             return "Excellent"
-        elif self.__credit >= 80:
+        elif self.get_credit() >= 80:
             return "Très Bien"
-        elif self.__credit >= 70:
+        elif self.get_credit() >= 70:
             return "Bien"
-        elif self.__credit >= 60:
+        elif self.get_credit() >= 60:
             return "Passable"
         else:
             return "insuffisant"
@@ -39,7 +39,7 @@ class Student:
 
 
 student =Student("John", "Doe", "145")
-student.add_credits((10))
+student.add_credits((60))
 student.add_credits((10))
 student.add_credits((10))
 print("Le nombre de crédits de", student.get_prenom(), student.get_nom(),

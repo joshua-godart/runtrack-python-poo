@@ -3,7 +3,7 @@ class Livre:
         self.__titre = "Shining"
         self.__auteur = "Stephen King"
         self.__nbr_pg = 576
-        self.__dispo = True
+        self.__dispo = False
 
     def vérification(self):
         if self.get_dispo() is True:
