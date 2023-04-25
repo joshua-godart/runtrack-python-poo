@@ -35,8 +35,14 @@ class Voiture:
     def set_state(self, new_state):
         self.__en_marche = new_state
 
+    def __verification_plein(self):
+        if self.get_reservoir_value() > 5:
+            return True
+        else:
+            return False
+
     def demarrer(self):
-        if self.get_state() is False and self.get_reservoir_value() > 5:
+        if self.get_state() is False and self.__verification_plein() is True:
             self.__en_marche = True
             print("la voiture à démarrer")
 
