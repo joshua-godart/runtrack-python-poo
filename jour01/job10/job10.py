@@ -4,7 +4,7 @@ class Voiture:
         self.__modele = modele
         self.__annee = annee
         self.__kilometrage = kilometrage
-        self.__reservoir = 5
+        self.__reservoir = 50
         self.__en_marche = False
 
     def get_marque(self):
@@ -35,21 +35,15 @@ class Voiture:
     def set_state(self, new_state):
         self.__en_marche = new_state
 
-    def verifier_plein(self, plein):
-        pass
-
-
     def demarrer(self):
-        if self.get_reservoir_value() > 5:
+        if self.get_state() is False and self.get_reservoir_value() > 5:
             self.__en_marche = True
             print("la voiture à démarrer")
-        else:
-            self.__en_marche = False
-            print("pas assez d'essence")
 
     def arreter(self):
-        self.__en_marche = False
-        print("la voiture s'est arrêtée")
+        if self.get_state() is True:
+            self.__en_marche = False
+            print("la voiture s'est arrêtée")
 
 voiture = Voiture("renault", "clio", "2006", 95000)
 voiture.demarrer()
